@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716648266797",
+    "project_id": "kallioapp",
+    "storage_bucket": "kallioapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716648266797:android:4eb7d82b6f942aa6548ca4",
+        "android_client_info": {
+          "package_name": "com.example.fcm_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSzYi2Asm6rRRga4mpHdoe9S5pThnB8Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
