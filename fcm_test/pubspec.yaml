@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/sounds/send.wav
     - assets/sounds/receive.flac
+    - assets/sounds/receive.mp3
     - assets/alanya_logo.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
