@@ -249,6 +249,7 @@ class _HomePageState extends State<HomePage> {
   String? _myToken;
   String  _status  = '⏳ Initialisation...';
   bool    _loading = true;
+  static bool _onplay=true;
 
   @override
   void initState() {
@@ -314,6 +315,20 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Clipboard.setData(ClipboardData(text: _myToken!));
                 _snack('✅ Token copié');
+              },
+            ),
+
+          if (_onplay)
+            IconButton(
+              icon: const Icon(Icons.stop, color: Colors.white60),
+              tooltip: 'arreter le son',
+              onPressed: () {
+                // setState(() {
+                //   _onplay=false;
+                // });
+                SoundService.dispose();
+                
+                _snack('Son arrete');
               },
             ),
         ],
