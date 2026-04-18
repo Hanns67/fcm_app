@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
   String? _myToken;
   String  _status  = '⏳ Initialisation...';
   bool    _loading = true;
-  static bool _onplay=true;
+  static bool _onplay=false;
 
   @override
   void initState() {
@@ -260,6 +260,9 @@ class _HomePageState extends State<HomePage> {
     FirebaseMessaging.onMessage.listen((msg) async {
       // Jouer le son de réception
       await SoundService.playReceive();
+      setState(() {
+        _onplay=true;
+      });
       _snack('📩 ${msg.notification?.title}: ${msg.notification?.body}');
     });
 
@@ -323,9 +326,9 @@ class _HomePageState extends State<HomePage> {
               icon: const Icon(Icons.stop, color: Colors.white60),
               tooltip: 'arreter le son',
               onPressed: () {
-                // setState(() {
-                //   _onplay=false;
-                // });
+                setState(() {
+                  _onplay=false;
+                });
                 SoundService.dispose();
                 
                 _snack('Son arrete');
